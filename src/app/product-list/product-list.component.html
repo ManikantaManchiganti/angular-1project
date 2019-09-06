@@ -13,6 +13,10 @@
 		Description: {{ product.description }}
 	</p>
 
+  <span *ngIf="product.img" [routerLink]="['/products', productId]">
+		<img src="{{product.img}}" alt="Smiley face" height="100" width="42">
+  </span>
+  
 	<button (click)="share()">Share</button>
 
   <app-product-alerts
